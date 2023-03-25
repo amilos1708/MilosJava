@@ -4,6 +4,7 @@ import hr.java.vjezbe.entitet.Artikl;
 import hr.java.vjezbe.entitet.Kategorija;
 import hr.java.vjezbe.entitet.Korisnik;
 
+
 import java.math.BigDecimal;
 import java.util.Scanner;
 
@@ -33,9 +34,13 @@ public class Glavna {
             korisnici[i] = new Korisnik(ime, prezime, email, telefon);
         }
 
+        //unos broja kategorija
+        System.out.print("Unesite broj kategorija koji želite unijeti: ");
+        int brojKategorija = Integer.parseInt(scanner.nextLine());
+
         //unos kategorija i artikala
-        Kategorija[] kategrije = new Kategorija[3];
-        for (int i = 0; i < kategrije.length; i++) {
+        Kategorija[] kategrije = new Kategorija[brojKategorija];
+        for (int i = 0; i < brojKategorija; i++) {
             System.out.println("Unesite podatke za " + (i+1) +".kategoriju:");
             System.out.print("Naziv: ");
             String naziv = scanner.nextLine();
